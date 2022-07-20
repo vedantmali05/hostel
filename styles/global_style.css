@@ -30,7 +30,7 @@
     --negative: #d93025;
     --negative-light: #ffdfdd;
     --success: #34a853;
-    --success-light: #c5ffd5;
+    --success-light: #e5f8eb;
 }
 
 html {
@@ -283,6 +283,23 @@ input[name="password"]+#pass_login_eye.show .eye-open-icon {
     color: var(--negative);
     fill: var(--negative);
     font-size: 1.4rem;
+}
+
+.input-wrapper .input-info {
+    display: flex;
+    gap: 2rem;
+    border-radius: 10px;
+    background-color: var(--success-light);
+    transition: .5s;
+    padding: 0 1rem;
+    opacity: 0;
+    max-height: 0;
+}
+
+.input-wrapper.focussed .input-info {
+    padding: 2rem 1rem;
+    opacity: 1;
+    max-height: 60rem;
 }
 
 button[type="submit"] {

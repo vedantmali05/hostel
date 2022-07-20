@@ -30,3 +30,6 @@ let passInput = document.querySelector("#login_password");
 let passVisBtn = document.querySelector("#pass_login_eye")
 
 passVisi(passInput, passVisBtn);
+
+// Function to toggle information visibility of input
+inputInfoVis(enrollInput);
