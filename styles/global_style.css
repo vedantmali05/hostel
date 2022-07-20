@@ -5,11 +5,11 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /* -webkit-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
-    transition: all .2s linear; */
+    transition: all .2s linear;
     outline: none;
     border: none;
     color: var(--text);
@@ -55,12 +55,18 @@ a:active {
 
 .logo {
     max-width: 4rem;
+    min-width: 3rem;
 }
 
 .logo * {
     font-weight: 600;
     font-size: 2rem;
     white-space: nowrap;
+}
+
+svg:not(.icon-btn svg) {
+    position: relative;
+    top: 2px;
 }
 
 .primary-cta,
@@ -138,8 +144,22 @@ img {
 }
 
 .heading1 {
-    font-size: 3.1rem;
+    font-size: 3.2rem;
     font-weight: 400;
+}
+
+.heading2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+.heading3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+:is(.heading1, .heading2, .heading3):first-child {
+    margin-top: 2rem;
 }
 
 .heading-label {
@@ -149,6 +169,14 @@ img {
 
 p {
     padding: .5rem;
+}
+
+.para {
+    font-size: 1.6rem;
+}
+
+.caption {
+    font-size: 1.4rem;
 }
 
 
@@ -171,6 +199,10 @@ form {
 
 .input-wrapper * {
     font-size: 1.6rem;
+}
+
+.input-wrapper .text-link {
+    width: fit-content;
 }
 
 .input-wrapper .input-cover {
