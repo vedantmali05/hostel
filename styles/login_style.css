@@ -1,6 +1,6 @@
 #main_login {
     width: 100%;
-    max-width: 100rem;
+    max-width: 130rem;
     margin: 7rem auto;
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +38,10 @@
     object-fit: cover;
     max-height: 90vh;
     position: relative;
+}
+
+.col-right * {
+    transition: none;
 }
 
 @media (min-width: 769px) {
