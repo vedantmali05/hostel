@@ -26,7 +26,7 @@ function regexMatcher(inputField, regexToMatch, errorToShow) {
                             <span class="input-error">${errorToShow}</span>
         `
 
-        container.append(errorBox);
+        container.insertBefore(errorBox, container.lastElementChild);
     }
 
 }
@@ -43,5 +43,20 @@ function passVisi(inputTag, tglBtn) {
             inputTag.setAttribute("type", "password");
         }
     })
+}
 
+// Function to toggle information visibility of input
+function inputInfoVis(inputTag) {
+    let container = inputTag.parentNode.parentNode;
+    let infoBox = container.querySelector(".input-info");
+    if (infoBox == null) return;
+    inputTag.onfocus = () => {
+        container.classList.add("focussed");
+        infoBox.classList.add("focussed");
+    }
+    inputTag.onblur = () => {
+        if (container.classList.contains("error")) return;
+        container.classList.remove("focussed");
+        infoBox.classList.remove("focussed");
+    }
 }
